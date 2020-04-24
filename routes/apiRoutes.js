@@ -1,5 +1,8 @@
 const router = require("express").Router();
 const db = require("../db/db.json");
+const fs = require("fs");
+const path = require("path");
+const store = require("../js/store");
 
 router.get("/notes", function(request, response) {
   // get a note
