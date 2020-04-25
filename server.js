@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 8080;
 
 // PLUS the following 
 app.use(express.static("public"));
+app.use(express.urlencoded({extended : true}));
+app.use(express.json());
 /* 
 ^^ creates a path to static front-end files: html, css & js.
 notice how files are referenced in index.html: 
