@@ -3,9 +3,11 @@ let router = require("express").Router();
 
 router.get("/notes", function(request, response) {
     // send  notes file
-    // 15-HotRestaurant/Solved for more info
+    response.sendFile(path.join(__dirname, "../public/notes.html"));
 });
 
-
+router.get("*", function(request, response){
+    response.sendFile(path.join(__dirname, "../public/index.html"));
+});
 
 module.exports = router;
